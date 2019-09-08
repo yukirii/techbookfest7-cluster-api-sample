@@ -49,7 +49,6 @@ echo "Generated ${CLUSTER_GENERATED_FILE}"
 # Generate machines manifest
 kustomize build "${SOURCE_DIR}/machines" | envsubst > "${MACHINES_GENERATED_FILE}"
 echo "Generated ${MACHINES_GENERATED_FILE}"
-exit
 
 # Download & Generate provider-components.yaml
 ## Cluster API Provider AWS
