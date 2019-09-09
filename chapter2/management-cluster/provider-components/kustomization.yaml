@@ -5,4 +5,4 @@ resources:
 - provider-components-kubeadm.yaml
 - provider-components-cluster-api.yaml
 patchesStrategicMerge:
-- manager_tolerations_patch.yaml
+- manager_patch.yaml
