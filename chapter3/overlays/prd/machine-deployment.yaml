@@ -1,0 +1,18 @@
+apiVersion: cluster.x-k8s.io/v1alpha2
+kind: MachineDeployment
+metadata:
+  name: capi-workload-node
+spec:
+  replicas: 5
+  template:
+    spec:
+      version: v1.15.3
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha2
+kind: AWSMachineTemplate
+metadata:
+  name: capi-workload-node
+spec:
+  template:
+    spec:
+      instanceType: t3.medium

@@ -1,0 +1,57 @@
+nameReference:
+- kind: Cluster
+  fieldSpecs:
+  - path: metadata/labels/cluster.x-k8s.io\/cluster-name
+    kind: MachineDeployment
+  - path: spec/selector/matchLabels/cluster.x-k8s.io\/cluster-name
+    kind: MachineDeployment
+  - path: spec/template/metadata/labels/cluster.x-k8s.io\/cluster-name
+    kind: MachineDeployment
+  - path: metadata/labels/cluster.x-k8s.io\/cluster-name
+    kind: Machine
+- kind: AWSCluster
+  fieldSpecs:
+  - path: spec/infrastructureRef/name
+    kind: Cluster
+- kind: AWSMachine
+  fieldSpecs:
+  - path: spec/infrastructureRef/name
+    kind: Machine
+- kind: AWSMachineTemplate
+  fieldSpecs:
+  - path: spec/template/spec/infrastructureRef/name
+    kind: MachineDeployment
+- kind: KubeadmConfig
+  fieldSpecs:
+  - path: spec/bootstrap/configRef/name
+    kind: Machine
+- kind: KubeadmConfigTemplate
+  fieldSpecs:
+  - path: spec/template/spec/bootstrap/configRef/name
+    kind: MachineDeployment
+namespace:
+- kind: Cluster
+  group: cluster.x-k8s.io
+  version: v1alpha2
+  path: spec/infrastructureRef/namespace
+  create: true
+- kind: Machine
+  group: cluster.x-k8s.io
+  version: v1alpha2
+  path: spec/infrastructureRef/namespace
+  create: true
+- kind: Machine
+  group: cluster.x-k8s.io
+  version: v1alpha2
+  path: spec/bootstrap/configRef/namespace
+  create: true
+- kind: MachineDeployment
+  group: cluster.x-k8s.io
+  version: v1alpha2
+  path: spec/template/spec/infrastructureRef/namespace
+  create: true
+- kind: MachineDeployment
+  group: cluster.x-k8s.io
+  version: v1alpha2
+  path: spec/template/spec/bootstrap/configRef/namespace
+  create: true
