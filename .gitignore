@@ -2,6 +2,7 @@
 .*.swp
 
 .envrc
+*kubeconfig
 
 chapter2/management-cluster/_out
 chapter2/management-cluster/provider-components/provider-components-*.yaml
