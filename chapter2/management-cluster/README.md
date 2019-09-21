@@ -12,6 +12,18 @@ management-cluster
 └── provider-components   # Cluster API Provider に関連するマニフェストのテンプレート
 ```
 
+## 必要となるツール
+
+バージョン番号は書籍執筆時に検証したバージョンになります。
+
+* [kind](https://kind.sigs.k8s.io/) v0.5.1
+* [clusterctl](https://github.com/kubernetes-sigs/cluster-api/releases) v0.2.1
+* [clusterawsadm](https://github.com/kubernetes-sigs/cluster-api-provider-aws/releases) v0.4.0
+* [awscli](https://aws.amazon.com/jp/cli/) v1.16.220
+* [jq](https://stedolan.github.io/jq/) v1.6
+* [kustomize](https://github.com/kubernetes-sigs/kustomize) v3.1.0
+* [gettext (envsubst)](https://www.gnu.org/software/gettext/) v.0.20.1
+
 ## クラスタの構築手順
 
 以下は本文で紹介しているコマンド例と同様です。
